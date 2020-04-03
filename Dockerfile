@@ -80,7 +80,7 @@ RUN git clone https://github.com/dkoboldt/varscan.git
 RUN mkdir ${HOME}/scripts
 RUN mkdir ${HOME}/genome
 ADD call_variants.pl ${HOME}/scripts
-ADD genome ${HOME}/genome
+ADD genome ${HOME}/genome #UserInput?
 
 USER root
 

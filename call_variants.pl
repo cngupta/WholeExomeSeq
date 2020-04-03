@@ -4,7 +4,7 @@
 
 # Author: Chirag Gupta (cxg040@uark.edu)
 
-$usage = "\nUsage: perl $0 NormalFile1 NormalFile2 TumorFile1 TumorFile2 \n\n"; # $0 holds the absolute path of this script
+$usage = "\nUsage: perl $0 NormalFwd NormalRev TumorFwd TumoRev2 #threads genomeFile bwaIndx outTag  \n\n"; # $0 holds the absolute path of this script
 $Nforward = @ARGV[0]; #Normal forward reads
 $Nreverse = @ARGV[1]; #Normal reverse reads
 $Tforward = @ARGV[2]; #Tumor forward reads
@@ -13,7 +13,7 @@ $threads = @ARGV[4];
 $gnome= @ARGV[5]; #genome fasta file
 $bwaIndex= @ARGV[6]; #path to BWA index
 $tag= @ARGV[7]; #unique tag for the sample/patient
-$ARGV[6] or die $usage;
+$ARGV[7] or die $usage;
 chomp($gnome);
 
 $Nfwdpaired = $Nforward . 'paired.fastq';
